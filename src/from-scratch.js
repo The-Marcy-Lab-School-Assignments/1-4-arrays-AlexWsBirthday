@@ -57,12 +57,21 @@ const deleteFromMiddle = (arr) => {
 };
 
 const isRightIndex = (arr, value, index) => { 
+  if (arr[index] == value) {
+    return true
+  } else if (arr[index] != value){
+    return false
+  }
 };
 
-const roundAllNumsDown = () => {
-};
+const roundAllNumsDown = (arr) => {
+  const roundDown = arr.map((i) => Math.floor((i))) //using .map to make a completely new array, and iterate through each index to floor its value
+  return roundDown
+}
 
-const getAllYCoordinates = () => {
+const getAllYCoordinates = (arrOfCoords) => {
+  const getYCoords = arrOfCoords.map((i) => (i[1])) //i[1] > we're passing the array through the parameter i, as arrOfCoords.map is making a copy off of the original arrOfCoords.
+  return getYCoords //i[1] is calling the first index of the array we're passing as an argument.
 };
 
 module.exports = {
